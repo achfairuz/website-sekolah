@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
 import { Bars3Icon } from "@heroicons/react/24/solid";
 
 const Navbar = () => {
@@ -9,6 +10,8 @@ const Navbar = () => {
     {
       key: "profile",
       title: "Profil",
+      subTitle:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro voluptate, quia aspernatur dolorum sunt quos nulla, vel minima voluptatibus assumenda provident officia inventore possimus, maiores enim nihil excepturi consectetur soluta.",
       children: [
         { key: "profile-sejarah", title: "Sejarah", href: "#sejarah" },
         { key: "profile-visimisi", title: "Visi & Misi", href: "#visi-misi" },
@@ -22,6 +25,8 @@ const Navbar = () => {
     {
       key: "program",
       title: "Program",
+      subTitle:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro voluptate, quia aspernatur dolorum sunt quos nulla, vel minima voluptatibus assumenda provident officia inventore possimus, maiores enim nihil excepturi consectetur soluta.",
       children: [
         { key: "program-tataboga", title: "Tata Boga", href: "#tataboga" },
         { key: "program-tahfidz", title: "Tahfidz Quran", href: "#tahfidz" },
@@ -35,6 +40,8 @@ const Navbar = () => {
     {
       key: "fasilitas",
       title: "Fasilitas",
+      subTitle:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro voluptate, quia aspernatur dolorum sunt quos nulla, vel minima voluptatibus assumenda provident officia inventore possimus, maiores enim nihil excepturi consectetur soluta.",
       children: [
         {
           key: "fasilitas-sarana",
@@ -51,6 +58,8 @@ const Navbar = () => {
     {
       key: "berita",
       title: "Berita",
+      subTitle:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro voluptate, quia aspernatur dolorum sunt quos nulla, vel minima voluptatibus assumenda provident officia inventore possimus, maiores enim nihil excepturi consectetur soluta.",
       children: [
         {
           key: "berita-karyailmiah",
@@ -62,11 +71,22 @@ const Navbar = () => {
     },
   ];
 
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden"; // disable scroll body
+    } else {
+      document.body.style.overflow = "auto"; // enable scroll kembali
+    }
+    return () => {
+      document.body.style.overflow = "auto"; // cleanup saat unmount
+    };
+  }, [open]);
   return (
     <>
       {/* Navbar (fixed & transparan) */}
-      <nav className='fixed top-0 left-0 w-full flex justify-between items-center   bg-gray-900/0 backdrop-blur-md text-white z-50'>
-        <h1 className='text-2xl font-bold text-black pl-32 pt-4'>
+
+      <nav className='fixed top-0 left-0 w-full flex justify-between items-center   bg-gray-900/0  text-white z-50'>
+        <h1 className='text-2xl font-bold text-white pl-32 py-4'>
           SDN 1 Wonorejo
         </h1>
         <button
@@ -80,7 +100,7 @@ const Navbar = () => {
 
       {/* Overlay Menu */}
       {open && (
-        <div className='fixed inset-0 top-16 bg-white flex z-40'>
+        <div className='fixed inset-0 top-0 bg-white flex z-40'>
           {/* Kiri: menu utama */}
           <div className='w-1/4 bg-gray-900 text-white flex flex-col p-6 space-y-6 pt-32 pl-32'>
             {menus.map((menu) => (
@@ -100,9 +120,12 @@ const Navbar = () => {
 
           {/* Kanan: submenu */}
           <div className='flex-1 p-8 overflow-y-auto pt-32 pl-16'>
-            <h2 className='text-2xl font-bold mb-4'>
+            <h2 className='text-2xl font-bold mb-2'>
               {menus.find((m) => m.key === activeMenu)?.title}
             </h2>
+            <p className='max-w-md mb-4 opacity-60'>
+              {menus.find((m) => m.key === activeMenu)?.subTitle}
+            </p>
             <ul className='space-y-3'>
               {menus
                 .find((m) => m.key === activeMenu)
