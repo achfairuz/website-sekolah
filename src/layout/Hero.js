@@ -11,10 +11,9 @@ const Hero = () => {
         backgroundPosition: "center",
       }}
     >
-      <h1 className='text-5xl font-extrabold text-gray-900'>
-        Welcome to MyBrand
-      </h1>
-      <p className='mt-4 text-lg text-gray-700'>Your subtitle here</p>
+      <div class='flex flex-col'>
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+      </div>
     </section>
   );
 };
