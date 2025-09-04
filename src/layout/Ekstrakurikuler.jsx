@@ -18,10 +18,13 @@ const Ekstrakurikuler = () => {
         {Data.map((ekstra) => (
           <div
             key={ekstra.id}
-            className='flex flex-col bg-white rounded-xl shadow p-4'
+            className='flex flex-col justify-between bg-white rounded-xl shadow p-4'
           >
-            <h1 className='text-xl font-bold mb-2'>{ekstra.name}</h1>
-            <p className='text-gray-600 mb-4 text-sm '>{ekstra.describe}</p>
+            <div>
+              {" "}
+              <h1 className='text-xl font-bold mb-2'>{ekstra.name}</h1>
+              <p className='text-gray-600 mb-4 text-sm '>{ekstra.describe}</p>
+            </div>
             <YouTube
               videoId={ekstra.id_yt}
               id={ekstra.id}

@@ -8,6 +8,7 @@ const Data = [
     deskripsi:
       "Teknologi kecerdasan buatan mulai diterapkan di sektor pertanian untuk meningkatkan hasil panen dan efisiensi kerja petani.",
     image: "https://placehold.co/600x400?text=Berita+1",
+    date: "2025-09-01",
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ const Data = [
     deskripsi:
       "Program baru dari pemerintah ditujukan untuk membantu UMKM beradaptasi dengan perkembangan teknologi digital.",
     image: "https://placehold.co/600x400?text=Berita+2",
+    date: "2025-09-02",
   },
   {
     id: 3,
@@ -24,6 +26,7 @@ const Data = [
     deskripsi:
       "Sebuah startup teknologi berhasil mengamankan investasi besar untuk mengembangkan produk inovatif mereka.",
     image: "https://placehold.co/600x400?text=Berita+3",
+    date: "2025-09-03",
   },
   {
     id: 4,
@@ -32,6 +35,7 @@ const Data = [
     deskripsi:
       "Beberapa kota besar di Indonesia mulai menerapkan energi terbarukan untuk mengurangi ketergantungan pada energi fosil.",
     image: "https://placehold.co/600x400?text=Berita+4",
+    date: "2025-09-04",
   },
   {
     id: 5,
@@ -40,6 +44,7 @@ const Data = [
     deskripsi:
       "Penelitian terbaru menghadirkan solusi keamanan data dengan memanfaatkan teknologi blockchain yang lebih transparan dan aman.",
     image: "https://placehold.co/600x400?text=Berita+5",
+    date: "2025-09-05",
   },
 ];
 
