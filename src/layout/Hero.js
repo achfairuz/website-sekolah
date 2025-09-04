@@ -30,18 +30,18 @@ const Hero = () => {
 
           <div className='flex flex-col items-start mt-2 md:mt-0'>
             <div className='bg-white px-2 py-1 rounded-lg'>
-              <span className='text-blue-600 font-medium text-xl'>
+              <span className='text-blue-600 font-medium text-xl md:text-sm'>
                 Kabar Berita
               </span>
             </div>
 
-            <h2 className='text-xl md:text-lg font-semibold text-white mb-2 md:mb-4'>
+            <h2 className='text-xl md:text-sm font-semibold text-white mb-2 md:mb-4 '>
               {shortTitle}
             </h2>
 
             <a
               href={`/berita/${lastNews.slug}`}
-              className='inline-flex items-center text-xl text-white hover:underline'
+              className='inline-flex items-center text-xl md:text-sm text-white hover:underline'
             >
               Lihat Detail
               <ChevronRightIcon className='w-4 h-4 ml-0.5' />
