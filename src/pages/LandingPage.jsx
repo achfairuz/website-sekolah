@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import Ekstrakurikuler from "../layout/Ekstrakurikuler";
 import Agenda from "../layout/Agenda";
 import Berita from "../layout/Berita";
+import Testimoni from "../layout/Testimoni";
 
 export default function LandingPage() {
   return (
@@ -15,6 +16,7 @@ export default function LandingPage() {
       <Ekstrakurikuler />
       <Agenda />
       <Berita />
+      <Testimoni />
       <Footer />
     </div>
   );
