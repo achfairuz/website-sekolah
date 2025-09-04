@@ -6,8 +6,8 @@ const AgendaSection = () => {
   const LastAgenda = Data[Data.length - 1];
 
   return (
-    <section className='px-6 md:px-20 py-20 bg-gray-900 text-white'>
-      <div className='flex flex-col lg:flex-row justify-between items-end gap-8 md:px-20 '>
+    <section className='px-6 md:px-20 md:py-20 py-16 bg-gray-900 text-white'>
+      <div className='flex flex-col lg:flex-row justify-between items-end md:gap-8 md:px-20 '>
         {/* Teks */}
         <div className='flex flex-col w-full mb-8'>
           <h1 className='text-4xl font-bold mb-2'>{LastAgenda.title}</h1>

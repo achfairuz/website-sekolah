@@ -13,8 +13,8 @@ const Ekstrakurikuler = () => {
   };
   return (
     <section className=''>
-      <h1 className='text-center text-4xl font-medium'>Ekstrakurikuler</h1>
-      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6 py-12 max-w-6xl mx-auto'>
+      <h1 className='text-center text-3xl font-normal'>Ekstrakurikuler</h1>
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6 py-8 md:py-12 max-w-6xl mx-auto'>
         {Data.map((ekstra) => (
           <div
             key={ekstra.id}
@@ -22,8 +22,10 @@ const Ekstrakurikuler = () => {
           >
             <div>
               {" "}
-              <h1 className='text-xl font-bold mb-2'>{ekstra.name}</h1>
-              <p className='text-gray-600 mb-4 text-sm '>{ekstra.describe}</p>
+              <h1 className='text-xl font-semibold mb-2'>{ekstra.name}</h1>
+              <p className='text-gray-600 mb-4 text-sm text-justify'>
+                {ekstra.describe}
+              </p>
             </div>
             <YouTube
               videoId={ekstra.id_yt}

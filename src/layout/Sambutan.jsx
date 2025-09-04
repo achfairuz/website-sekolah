@@ -18,8 +18,8 @@ const Sambutan = () => {
 
         {/* Teks */}
         <div className='flex flex-col text-center md:text-left text-white dark:text-black'>
-          <h1 className='text-4xl'>{Data.title}</h1>
-          <p className='line-clamp-6 mt-2 text-justify md:text-left  opacity-60'>
+          <h1 className='text-4xl font-normal'>{Data.title}</h1>
+          <p className='line-clamp-6 mt-4 md:mt-2 text-justify md:text-left  opacity-60'>
             {Data.isi}
           </p>
           <a

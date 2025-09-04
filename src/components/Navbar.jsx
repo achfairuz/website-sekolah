@@ -93,7 +93,7 @@ const Navbar = () => {
         </h1>
         <button
           onClick={() => setOpen(!open)}
-          className='flex items-center gap-2 bg-gray-800/80 text-white py-5 px-6 hover:bg-gray-600 '
+          className='flex items-center gap-2 bg-gray-800/80 text-white py-2 px-3 md:py-5 md:px-6  hover:bg-gray-600 '
         >
           {open ? (
             <XMarkIcon className='w-8 h-8' />
