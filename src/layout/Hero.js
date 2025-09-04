@@ -9,39 +9,39 @@ const Hero = () => {
   const shortTitle = lastNews.title.slice(0, 15) + "...";
   return (
     <section
-      className='hero min-h-screen  flex md:flex-row justify-between md:px-32 md:py-12 items-end'
+      className='hero min-h-screen  flex md:flex-row flex-col md:justify-between md:px-32 md:py-12  md:items-end items-center justify-end gap-8 pb-20 md:pb-16'
       style={{
         backgroundImage: `url(${SekolahSD})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
-      <div className='flex flex-col'>
-        <h1 className=' font-semibold text-white mb-4 text-5xl max-w-3xl '>
+      <div className='flex flex-col mx-4 md:mx-0'>
+        <h1 className=' font-semibold text-white mb-4 text-5xl md:max-w-3xl '>
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </h1>
 
-        <div className='flex flex-row gap-4 items-center ml-8 bg-transparent backdrop-blur-lg max-w-sm py-4 px-2'>
+        <div className='flex flex-col md:flex-row gap-4 items-start md:items-center bg-transparent backdrop-blur-lg max-w-full md:max-w-sm py-4 px-2 rounded-lg'>
           <img
             src={lastNews.image}
             alt={lastNews.title}
-            className='w-48 h-36 object-cover rounded-md'
+            className='w-full md:w-48 h-40 md:h-36 object-cover rounded-md'
           />
 
-          <div className='flex flex-col items-start  '>
+          <div className='flex flex-col items-start mt-2 md:mt-0'>
             <div className='bg-white px-2 py-1 rounded-lg'>
-              <span className='text-blue-600 font-medium text-sm'>
+              <span className='text-blue-600 font-medium text-xl'>
                 Kabar Berita
               </span>
             </div>
 
-            <h2 className='text-lg font-semibold text-white mb-4'>
+            <h2 className='text-xl md:text-lg font-semibold text-white mb-2 md:mb-4'>
               {shortTitle}
             </h2>
 
             <a
               href={`/berita/${lastNews.slug}`}
-              className='flex items-center text-sm text-white hover:underline'
+              className='inline-flex items-center text-xl text-white hover:underline'
             >
               Lihat Detail
               <ChevronRightIcon className='w-4 h-4 ml-0.5' />
@@ -50,14 +50,14 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className='flex md:flex-col space-y-4 max-w-sm'>
+      <div className='flex md:flex-col justify-center space-x-6 md:space-x-0 md:space-y-4 max-w-sm'>
         {Sosmed.map((item) => (
           <div key={item.id}>
             <a
               href={item.url}
               target='_blank'
               rel='noopener noreferrer'
-              className='w-12 h-12 flex items-center justify-center rounded-full border border-white text-white hover:bg-blue-600 transition-colors'
+              className='w-20 h-20 md:w-12 md:h-12 flex items-center justify-center rounded-full border border-white text-white hover:bg-blue-600 transition-colors'
             >
               {item.icon}
             </a>
