@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import Hero from "../layout/Hero";
 import Sambutan from "../layout/Sambutan";
 import Footer from "../components/Footer";
+import Ekstrakurikuler from "../layout/Ekstrakurikuler";
 
 export default function LandingPage() {
   return (
@@ -9,6 +10,7 @@ export default function LandingPage() {
       <Navbar />
       <Hero />
       <Sambutan />
+      <Ekstrakurikuler />
       <Footer />
     </div>
   );
