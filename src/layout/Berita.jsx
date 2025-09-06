@@ -9,6 +9,7 @@ const Berita = () => {
 
   return (
     <section className='py-12 md:py-20'>
+      {/* Header */}
       <div className='flex flex-row justify-between md:px-48 px-6 items-center md:mb-8 mb-6'>
         <h1 className='text-xl md:text-2xl font-medium text-start'>
           Kabar dari kami
@@ -24,41 +25,42 @@ const Berita = () => {
         </a>
       </div>
 
-      <div className='flex flex-col md:flex-row justify-center gap-4 md:gap-16 mx-4'>
+      {/* Konten utama */}
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-8 px-6 md:px-20 lg:px-48'>
         {/* Berita Utama */}
-        <div className='max-w-sm md:max-w-xl w-full'>
+        <div>
           <img
             src={LastBerita.image}
             alt={LastBerita.title}
-            className='max-w-86 md:max-w-3xl bg-cover rounded-lg'
+            className='w-full h-64 md:h-80 lg:max-w-xl object-cover rounded-lg'
           />
           <div className='flex flex-col md:mt-6 mt-4'>
-            <h1 className='text-sm md:text-md mb-1'>
+            <h1 className='text-sm md:text-md mb-1 text-gray-500'>
               Kabar Berita | <span>{formatDate(LastBerita.date)}</span>
             </h1>
-            <h1 className='text-xl md:text-2xl font-medium text-justify'>
+            <h1 className='text-lg md:text-2xl font-medium text-justify'>
               {LastBerita.title}
             </h1>
           </div>
         </div>
 
         {/* Berita Lainnya */}
-        <div className='flex gap-6 overflow-x-auto md:flex-col md:gap-8 p-2'>
+        <div className='flex flex-col gap-4 md:gap-6 overflow-x-auto md:overflow-visible'>
           {limitedData.map((berita) => (
             <div
               key={berita.id}
-              className='flex flex-row gap-3 md:gap-4  text-black  rounded-lg shadow-md p-3 shrink-0 md:shrink'
+              className='flex flex-row gap-3 md:gap-4 text-black rounded-lg shadow-md p-3 shrink-0'
             >
               <img
                 src={berita.image}
                 alt={berita.title}
-                className='w-40 h-28 md:w-60 md:h-40 object-cover rounded-lg'
+                className='w-32 h-24 md:w-40 md:h-28 lg:w-48 lg:h-32 object-cover rounded-lg'
               />
-              <div className='flex flex-col '>
+              <div className='flex flex-col justify-center'>
                 <h1 className='text-xs md:text-sm text-gray-500 mb-1'>
                   Berita | {formatDate(berita.date)}
                 </h1>
-                <h1 className='text-sm md:text-base font-medium max-w-40 text-justify'>
+                <h1 className='text-sm md:text-base font-medium text-justify line-clamp-2'>
                   {limitWords(berita.title, 8)}
                 </h1>
               </div>

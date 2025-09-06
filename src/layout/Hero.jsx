@@ -30,7 +30,7 @@ const Hero = () => {
           />
 
           <div className='flex flex-col items-start  md:mt-0'>
-            <div className='bg-white px-2 py-1 rounded-lg'>
+            <div className='bg-white px-2 py-1 rounded-lg mb-1'>
               <span className='text-blue-600 font-medium text-sm md:text-sm'>
                 Kabar Berita
               </span>
