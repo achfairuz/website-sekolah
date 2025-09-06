@@ -67,6 +67,7 @@ const Navbar = () => {
       subTitle:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro voluptate, quia aspernatur dolorum sunt quos nulla, vel minima voluptatibus assumenda provident officia inventore possimus, maiores enim nihil excepturi consectetur soluta.",
       children: [
+        { key: "kabar-berita", title: "Kabar Berita", href: "/berita/index" },
         {
           key: "berita-karyailmiah",
           title: "Karya Ilmiah",
