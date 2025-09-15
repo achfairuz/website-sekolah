@@ -23,7 +23,7 @@ const Sambutan = () => {
             {Data.isi}
           </p>
           <a
-            href={`/Sambutan/${Data.id}`}
+            href={`/profile/index/`}
             className='flex items-center text-md text-white dark:text-gray-900 hover:underline mt-8 border-2 border-gray-600 hover:bg-blue-600 hover:text-white rounded-lg px-4 py-1 w-fit'
           >
             Lihat Selengkapnya
